@@ -1,0 +1,67 @@
+saving the model at the end of epoch 70, iters 76720
+End of epoch 70 / 200    Time Taken: 508 sec
+learning rate 0.0002000 -> 0.0002000
+(epoch: 71, iters: 80, time: 0.819, data: 0.002) D_A: 0.251 G_A: 0.141 cycle_A: 0.529 idt_A: 0.467 D_B: 0.194 G_B: 1.136 cycle_B: 0.935 idt_B: 0.157 
+(epoch: 71, iters: 180, time: 0.498, data: 0.001) D_A: 0.281 G_A: 0.464 cycle_A: 0.599 idt_A: 0.085 D_B: 0.188 G_B: 0.377 cycle_B: 0.330 idt_B: 0.199 
+(epoch: 71, iters: 280, time: 0.500, data: 0.001) D_A: 0.100 G_A: 0.300 cycle_A: 0.777 idt_A: 0.069 D_B: 0.260 G_B: 0.141 cycle_B: 0.191 idt_B: 0.324 
+(epoch: 71, iters: 380, time: 0.496, data: 0.001) D_A: 0.119 G_A: 0.494 cycle_A: 0.499 idt_A: 0.111 D_B: 0.120 G_B: 0.269 cycle_B: 0.280 idt_B: 0.172 
+(epoch: 71, iters: 480, time: 0.621, data: 0.001) D_A: 0.194 G_A: 0.449 cycle_A: 0.689 idt_A: 0.072 D_B: 0.146 G_B: 0.113 cycle_B: 0.208 idt_B: 0.297 
+(epoch: 71, iters: 580, time: 0.499, data: 0.001) D_A: 0.040 G_A: 0.126 cycle_A: 0.566 idt_A: 0.247 D_B: 0.250 G_B: 0.252 cycle_B: 0.704 idt_B: 0.221 
+
+
+^CException in user code:
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/visdom/__init__.py", line 362, in _send
+    r = requests.post(
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/urllib3/connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "train.py", line 44, in <module>
+    for i, data in enumerate(dataset):  # inner loop within one epoch
+  File "/home/ziming/ziming/machine-learning-issues/pytorch-CycleGAN-and-pix2pix/data/__init__.py", line 90, in __iter__
+    for i, data in enumerate(self.dataloader):
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 517, in __next__
+    data = self._next_data()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1182, in _next_data
+    idx, data = self._get_data()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1148, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 986, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/multiprocessing/queues.py", line 116, in get
+    return _ForkingPickler.loads(res)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/site-packages/torch/multiprocessing/reductions.py", line 282, in rebuild_storage_fd
+    fd = df.detach()
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/multiprocessing/resource_sharer.py", line 87, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/multiprocessing/connection.py", line 502, in Client
+    c = SocketClient(address)
+  File "/home/ziming/miniconda3/envs/pytorch-CycleGAN-and-pix2pix/lib/python3.8/multiprocessing/connection.py", line 630, in SocketClient
+    s.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory
